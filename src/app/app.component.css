@@ -1,0 +1,250 @@
+.navbar {
+    position: absolute;
+    width: 100%;
+    background-color: transparent !important;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    padding: 1rem;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, top 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    top: 0;
+    background-color: #f0e1d5 !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+  }
+  
+  @media (min-width: 768px) {
+    .navbar.scrolled {
+      position: fixed;
+    }
+  }
+
+
+.navbar-brand img {
+    height: 6rem;
+    width: auto;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    color: #54767a;
+    font-weight: 500;
+    font-size: 1.3rem;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 7px;
+    width: 0;
+    height: 2px;
+    background-color: #54767a;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 70%;
+}
+
+.navbar-nav .nav-link.active {
+    color: #54767a;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-brand img {
+        height: 45px;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar {
+        background-color: #f0e1d5 !important;
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-nav .nav-link:hover::after,
+    .navbar-nav .nav-link.active::after {
+        width: 0%;
+    }
+
+    .navbar-brand img {
+        height: 6rem;
+    }
+
+    .navbar-nav {
+        text-align: right;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.5rem 0;
+        font-size: 1.2rem;
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
+    }
+}
+
+.justify-content-end {
+    justify-content: flex-end;
+}
+
+/* footer */
+.footer-section {
+    background: linear-gradient(135deg, #f0e1d5, #9db7ae, #517475) !important;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-container .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-container .col {
+    flex: 1;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.logo-section {
+    text-align: center;
+}
+
+.logo-section img {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.logo-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #000;
+    font-weight: bold;
+}
+
+.logo-section p {
+    font-size: 0.875rem;
+    color: #555;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.link-section {
+    text-align: left;
+}
+
+.link-section h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #4c767a;
+    font-weight: bold;
+    border-bottom: 3px solid #fff;
+    display: inline-block;
+    animation: borderBlink 1s ease-in-out infinite;
+}
+
+
+
+@keyframes borderBlink {
+
+    0%,
+    100% {
+        border-color: #fff;
+    }
+
+    50% {
+        border-color: transparent;
+    }
+}
+
+.link-section .links {
+    list-style: none;
+    padding: 0;
+}
+
+.link-section .links a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+
+.contact-section {
+    text-align: left;
+}
+
+.contact-section h4 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    color: #4c767a;
+    font-weight: bold;
+    border-bottom: 3px solid #fff;
+    display: inline-block;
+    animation: borderBlink 1s ease-in-out infinite;
+}
+
+.contact-section p {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px 0;
+    font-size: 0.875rem;
+    color: #000;
+    text-align: left;
+}
+
+.contact-section svg {
+    margin-right: 10px;
+    flex-shrink: 0;
+    vertical-align: middle;
+}
+
+.contact-section a {
+    color: #000;
+    text-align: left;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .footer-container .row {
+        flex-direction: column;
+    }
+
+    .footer-container .col {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}

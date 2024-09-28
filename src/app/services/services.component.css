@@ -1,0 +1,228 @@
+.banner-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 100px 0;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-attachment: fixed;
+    height: 80vh;
+}
+
+.banner-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.banner-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.banner-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.banner-header p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+.banner-header hr.border-1 {
+    border: 1px solid #fff;
+    width: 100%;
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .banner-header {
+        padding: 60px 0;
+        background-attachment: scroll;
+    }
+
+    .banner-header h1 {
+        font-size: 2rem;
+    }
+
+    .banner-header p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner-header {
+        padding: 40px 20px;
+    }
+
+    .banner-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .banner-header p {
+        font-size: 0.9rem;
+    }
+
+    .banner-header .col-md-5 {
+        margin-top: 20px;
+    }
+}
+
+/* services */
+.services {
+    background-color: #f7f7f7;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services .row {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.services h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.services p {
+    text-align: left;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.services .col {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.services .col:first-child {
+    padding-right: 10px;
+}
+
+.services .col:last-child {
+    padding-left: 10px;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 100%;
+}
+
+.wedding-container,
+.pre-wedding-container,
+.new-born-container,
+.maternity-container,
+.toddler-container,
+.product-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.wedding-container,
+.new-born-container,
+.toddler-container{
+    background-color: #f0e1d5;
+}
+
+.maternity-container,
+.pre-wedding-container,
+.product-container{
+    background-color: #54767a;
+}
+
+/* Responsive styles */
+
+@media (max-width: 768px) {
+    .services .row {
+        flex-direction: column;
+    }
+
+    .services .col {
+        padding: 10px;
+    }
+
+    .services .col:first-child {
+        padding-right: 0;
+    }
+
+    .services .col:last-child {
+        padding-left: 0;
+    }
+
+    .carousel {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services {
+        padding: 20px;
+    }
+
+    .services h2 {
+        font-size: 18px;
+    }
+
+    .services p {
+        font-size: 14px;
+    }
+
+    .carousel {
+        height: 200px;
+    }
+}
